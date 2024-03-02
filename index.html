@@ -6,136 +6,128 @@
     <title>Sociedade do Cristal</title>
     <style>
 
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    
-    header {
-        width: 100%;
-        height: 100vh;
-        color: white;
-        background-image: url('img/topo.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
         
-        text-align: bottom;
+        header {
+            width: 100%;
+            height: 100vh;
+            color: white;
+            background-image: url('img/topo.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            
+            text-align: bottom;
+            
+            text-shadow: -10px -5px 5px #666,
+                        -10px -5px 5px #666,
+                        -10px -5px 5px #c0c0c0,
+                        -10px -5px 5px #c0c0c0;
+            padding-left: 5%;
+            padding-top: 15%;
+            
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            font-size: 75px;
+        }
         
-        text-shadow: -10px -5px 5px #000,
-                    -1px -1px 1px #000,
-                    -1px -1px 1px #000,
-                    -1px -1px 1px #000;
-        padding-left: 5%;
-        padding-top: 15%;
+        h2 {
+            font-size: 35px;
+        }
         
-    }
+        h3 {
+            font-size: 35px;
+            margin-top: 2%;
+            text-align: center;
+            color: red;
+        }
 
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-    }
+        p {
+          font-size: 18px;
+          color: #666;
+          line-height: 1.5;
+          padding-left: 2%;
+          padding-right: 2%;
+          padding-top: 2%;
+          text-align: justify;
+        }
+        
+        .container {
+            max-width: 100%;
+        }
 
-    .container {
-      max-width: 100%;
-      margin: 0 auto;
-    }
-    
-    .container .inicio h3 {
-        margin: 1%;
-      text-align: center;
-      color: red;
-    }
+        .container img {
+            width: 40%;
+            float: left;
+        }
+        
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 3%;
+        }
+        
+        .compra {
+        }
 
-    .content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-    }
+        .compra ul {
+          list-style: none;
+          font-size: 18px;
+          color: #666;
+          margin-top: 5%;
+        }
 
-    .content .image {
-      width: 40%;
-      
-    }
+        .compra ul li {
+          margin-bottom: 10px;
+        }
 
-    .content img {
-      width: 100%;
-      height: auto;
-      vertical-align: center;
-    }
+        .compra ul li:before {
+          content: "\2713";
+          color: green;
+          margin-right: 10px;
+        }
 
-    .content .info {
-      width: 60%;
-    }
-    
-    h1 {
-      font-size: 65px;
-    }
+        .compra a {
+          display: inline-block;
+          font-size: 24px;
+          color: white;
+          background-color: #333;
+          padding: 10px 20px;
+          text-decoration: none;
+          margin-bottom: 20px;
+        }
 
-    h3 {
-      font-size: 25px;
-    }
+        .compra a:hover {
+          background-color: #444;
+        }
 
-    p {
-      font-size: 18px;
-      color: #666;
-      line-height: 1.5;
-      padding-left: 20px;
-      padding-right: 20px;
-      padding-top: 20px;
-      text-align: justify;
-    }
+        footer p {
+          text-align: center;
+          color: #666;
+          font-size: 14px;
+        }
 
-    ul {
-      list-style: none;
-      font-size: 18px;
-      color: #666;
-      margin-top: 5%;
-    }
+        a {
+          color: #666;
+          text-decoration: none;
+        }
 
-    ul li {
-      margin-bottom: 10px;
-    }
+        a:hover {
+          text-decoration: underline;
+        }
 
-    .content .info ul li:before {
-      content: "\2713";
-      color: green;
-      margin-right: 10px;
-    }
-
-    .content .info a {
-      display: inline-block;
-      font-size: 24px;
-      color: white;
-      background-color: #333;
-      padding: 10px 20px;
-      text-decoration: none;
-      margin-bottom: 20px;
-    }
-
-    .content .info a:hover {
-      background-color: #444;
-    }
-
-    footer p {
-      text-align: center;
-      color: #666;
-      font-size: 14px;
-    }
-
-    a {
-      color: #666;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .imagem-container {
+        .imagem-container {
             position: fixed;
             top: 0;
             left: 0;
@@ -152,63 +144,61 @@
             max-height: 100%;
         }
 
-  </style>
+    </style>
 </head>
 
 <body>
 
     <header>
         <h1>Sociedade do Cristal:</h1>
-        <h3>Uma aventura emocionante e divertida pelos mistérios da Chapada dos Veadeiros</h3>
+        <h2>Uma aventura emocionante e divertida pelos mistérios da Chapada dos Veadeiros</h2>
     </header>
     
+    <div class="imagem-container" onclick="fecharImagem()">
+        <img class="imagem-ampliada" src="img/book/00.png" alt="Imagem Ampliada">
+    </div>
+    
+    <h3>Pré-venda do livro!</h3>
+    
     <div class="container">
-    
-        <div class="inicio">
-            <h3>Pré-venda do livro "Sociedade do Cristal: Uma aventura emocionante e divertida pelos mistérios da Chapada dos Veadeiros".</h3>
-            <p>Você quer ser um dos primeiros a ler o livro? Então aproveite a oportunidade de comprar o seu exemplar na pré-venda! Ao comprar, você estará reservando o seu direito de receber o livro antes de todo mundo. Você também estará apoiando o autor a realizar o seu sonho de publicar o seu primeiro livro. <strong>Além disso, parte do valor das vendas será destinada para o combate a incêndios na Chapada dos Veadeiros e proteção ambiental permanente da fauna e da flora do Cerrado.</strong></p>
+            
+        <p>Você quer ser um dos primeiros a ler o livro? Então aproveite a oportunidade de comprar o seu exemplar na pré-venda! Ao comprar, você estará reservando o seu direito de receber o livro antes de todo mundo e também estará ajudando o autor a conseguir recursos para publicar o seu primeiro livro. <strong>Além disso, parte do valor das vendas será destinada para o combate a incêndios na Chapada dos Veadeiros e proteção ambiental permanente da fauna e da flora do Cerrado.</strong></p>
 
-            <p>O livro está previsto para ser lançado em dezembro de 2024, mas você pode garantir o seu agora mesmo, por um preço especial. Basta clicar no botão abaixo e fazer o seu pedido. Você receberá o seu livro assim que ele estiver pronto, com uma dedicatória exclusiva do autor. Não perca essa chance de embarcar em uma aventura incrível, cheia de magia, ação, aventura, fantasia, ficção, humor, fortes emoção e sabedoria. Compre já o seu exemplar de "Sociedade do Cristal: Uma aventura emocionante e divertida pelos mistérios da Chapada dos Veadeiros" na pré-venda!</p>
+        <img src="img/book/00.png" alt="Capa do livro Sociedade do Cristal" onclick="expandirImagem()">
 
-            <p> <strong> Tiago Barreto dos Santos </strong> é um autêntico e talentoso escritor brasileiro nativo da região centro-oeste que viveu sua infancia e adolescência na Chapada dos Veadeiros (Alto Paraíso de Goiás) e se inspirou na beleza e na magia desse lugar, um dos mais importantes patrimônios naturais do Brasil e do mundo, para escrever essa linda história de aventura, magia e ficção. Este é o seu livro de estréia no mundo da literatura. </p>
-        
-            <p>Já imaginou um lugar onde a natureza, a magia e a filosofia se encontram? Um lugar onde se entende o sentido da vida com a mesma facilidade com que se aprender a tocar um ukulele? Um lugar onde você pode descobrir os segredos de um cristal mágico que protege toda a biodiversidade e a cultura do Cerrado brasileiro? Esse lugar existe, e se chama Chapada dos Veadeiros, um paraíso ecológico e místico no coração do Brasil. É lá que vive a Sociedade do Cristal, uma egrégora fundada pelos Cavaleiros de Aquário que luta pela preservação ambiental, que guarda e estuda o cristal mágico, e que recruta jovens talentosos para se tornarem discípulos da Mestra Tatu Verdadeira.</p>
+        <p>O livro está previsto para ser lançado em dezembro de 2024, mas você pode garantir o seu agora mesmo, por um preço especial. Basta clicar no botão abaixo e fazer o seu pedido. Você receberá o seu livro assim que ele estiver pronto, com uma dedicatória exclusiva do autor. Não perca essa chance de embarcar em uma aventura incrível, cheia de magia, ação, aventura, fantasia, ficção, humor, fortes emoção e sabedoria. Compre já o seu exemplar de "Sociedade do Cristal: Uma aventura emocionante e divertida pelos mistérios da Chapada dos Veadeiros" na pré-venda!</p>
 
-            <p>Neste livro, você vai acompanhar a história de dois protagonistas, uma garota de Brasília e um menino nativo da Chapada dos Veadeiros, que são escolhidos pela Sociedade do Cristal para se juntarem à sua Academia. Lá, eles vão aprender sobre os símbolos, as forças evolutivas e involutivas, e os arquétipos que regem o universo. Eles também vão fazer novos amigos, viver experiências transcendentais e enfrentar perigos inimagináveis.</p>
+        <p> <strong> Tiago Barreto dos Santos </strong> é um autêntico e talentoso escritor brasileiro nativo da região centro-oeste que viveu sua infancia e adolescência na Chapada dos Veadeiros (Alto Paraíso de Goiás) e se inspirou na beleza e na magia desse lugar, um dos mais importantes patrimônios naturais do Brasil e do mundo, para escrever essa linda história de aventura, magia e ficção. Este é o seu livro de estréia no mundo da literatura. </p>
+
+        <p>Já imaginou um lugar onde a natureza, a magia e a filosofia se encontram? Um lugar onde se entende o sentido da vida com a mesma facilidade com que se aprender a tocar um ukulele? Um lugar onde você pode descobrir os segredos de um cristal mágico que protege toda a biodiversidade e a cultura do Cerrado brasileiro? Esse lugar existe, e se chama Chapada dos Veadeiros, um paraíso ecológico e místico no coração do Brasil. É lá que vive a Sociedade do Cristal, uma egrégora fundada pelos Cavaleiros de Aquário que luta pela preservação ambiental, que guarda e estuda o cristal mágico, e que recruta jovens talentosos para se tornarem discípulos da Mestra Tatu Verdadeira.</p>
+
+        <p>Neste livro, você vai acompanhar a história de dois protagonistas, uma garota de Brasília e um menino nativo da Chapada dos Veadeiros, que são escolhidos pela Sociedade do Cristal para se juntarem à sua Academia. Lá, eles vão aprender sobre os símbolos, as forças evolutivas e involutivas, e os arquétipos que regem o universo. Eles também vão fazer novos amigos, viver experiências transcendentais e enfrentar perigos inimagináveis.</p>
+
+        <p>Mas nem tudo é paz e harmonia na Chapada dos Veadeiros. Um grupo de vilões, liderados pelo terrível Capetão Mentira, planeja invadir a região, roubar o cristal mágico e destruir tudo o que há de belo e sagrado. Cabe aos protagonistas, com a ajuda da Sociedade do Cristal, impedir esse ataque e salvar a Chapada dos Veadeiros de um destino trágico.</p>
+
+        <p>Prepare-se para embarcar em uma aventura incrível! Você vai se encantar com as personagens, os cenários e as lições deste livro, que mistura ficção, filosofia, história, política, psicanálise, matemática, física, linguística e muito mais. Você vai se divertir, se emocionar e se surpreender com as reviravoltas e os mistérios que esta história reserva.</p>
+    </div>
+                
                 
         
-        </div>
-
-        <div class="imagem-container" onclick="fecharImagem()">
-            <img class="imagem-ampliada" src="img/book/00.png" alt="Imagem Ampliada">
-        </div>
-    
-        <div class="content">
-        
-            <div class="image">
-                <img src="img/book/00.png" alt="Capa do livro Sociedade do Cristal" onclick="expandirImagem()">
-            </div>
-      
-            <div class="info">
-
-                <p>Mas nem tudo é paz e harmonia na Chapada dos Veadeiros. Um grupo de vilões, liderados pelo terrível Capetão Mentira, planeja invadir a região, roubar o cristal mágico e destruir tudo o que há de belo e sagrado. Cabe aos protagonistas, com a ajuda da Sociedade do Cristal, impedir esse ataque e salvar a Chapada dos Veadeiros de um destino trágico.</p>
-
-                <p>Prepare-se para embarcar em uma aventura incrível! Você vai se encantar com as personagens, os cenários e as lições deste livro, que mistura ficção, filosofia, história, política, psicanálise, matemática, física, linguística e muito mais. Você vai se divertir, se emocionar e se surpreender com as reviravoltas e os mistérios que esta história reserva.</p>
-                
-                <ul>
-                  <li>Formato: e-book (PDF)</li>
-                  <li>Número de páginas: 200</li>
-                  <li>Preço: R$ 59,99</li>
-                </ul>
+    <div class="box">
+        <div class="compra">
+            <ul>
+              <li>Formato: e-book (PDF)</li>
+              <li>Número de páginas: 200</li>
+              <li>Preço: R$ 59,99</li>
+            </ul>
+            <div style="text-align: center;">
                 <a href="https://mpago.la/2s3G414">Comprar agora</a>
             </div>
         </div>
-    
-        <div style="text-align: center;">
-            <img src="img/mestra.png" alt="Mestra Tatu Verdadeira" width="40%">
-        </div> 
         
     </div>
+    
+    <div style="text-align: center;">
+        <img src="img/mestra.png" alt="Mestra Tatu Verdadeira" width="40%">
+    </div>
+        
     
     <footer>
         <p>
@@ -217,6 +207,7 @@
         </p>
         <p>© 2024 Todos os direitos reservados.</p>
     </footer>
+    
     <script>
         function expandirImagem() {
             document.querySelector('.imagem-container').style.display = 'flex';
