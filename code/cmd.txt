@@ -1,5 +1,4 @@
 gcc code.c -o code.bin; ./code.bin "Encontre Eduardo no Festival de Rock de 1980 na Chapada dos Veadeiros as 16h20"
-cat decode.txt | cut -d"=" -f2 | sort | uniq -c | sort -n
-cat decode.txt | sort | uniq -c | sort -n
-head -129 ascii.txt | tail -94 > caracteres-legiveis.txt
+cat saida/decode.txt | cut -d"=" -f2 | sort | uniq -c | sort -n
+cat saida/decode.txt | sort | uniq -c | sort -n
 
