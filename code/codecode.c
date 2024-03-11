@@ -20,7 +20,7 @@
 #include <math.h>
 
 void printTabelaASCII() {
-    for (int i = 33; i < 127; i++) {
+    for (int i = 29; i < 127; i++) {
         printf("%3d %08b %c\n", i, i, i);
     }
 }
@@ -30,8 +30,8 @@ void exportarTabelaASCII() {
     FILE *file = fopen(arq, "w+");
     
     fprintf(file, "%s;%s;%s\n", "Decimal","Binário", "Caractere");
-    for (int i = 33; i < 127; i++) {
-        fprintf(file, "%3d;%08b;%c\n", i, i, i);
+    for (int i = 29; i < 127; i++) {
+        fprintf(file, "%d;%08b;%c\n", i, i, i);
     }
     fclose(file);
 }
