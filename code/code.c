@@ -20,7 +20,7 @@ void exportarTabelaASCII() {
 
 int main(int size, char *args[]) {
     if(size > 1) {
-        char *arq0 = "saida/code.txt", *arq1 = "saida/decode.txt";
+        char *arq0 = "saida/code0.txt", *arq1 = "saida/code1.txt";
         FILE *file0 = fopen(arq0, "w+"), *file1 = fopen(arq1, "w+");
         for(int i = 1; i < size; i++) {
             for(int j = 0; j < strlen(args[i]); j++) {
