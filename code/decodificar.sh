@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ARQ_ASCII=entrada/ascii.txt
-ARQ_TXT_CODIFICADO=entrada/mensagem-em-codigo-binario.txt
+ARQ_TXT_CODIFICADO=entrada/mensagem-codificada.txt
 ARQ_TXT_DECODIFICADO=saida/mensagem-decodificada.txt
 
 if [ -f $ARQ_ASCII ] && [ -f $ARQ_TXT_CODIFICADO ]
