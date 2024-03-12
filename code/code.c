@@ -2,8 +2,8 @@
 #include <string.h>
 
 void printTabelaASCII() {
-    for (int i = 29; i < 127; i++) {
-        printf("%3d %08b %c\n", i, i, i);
+    for (int i = 32; i < 127; i++) {
+        printf("%3d %c %08b\n", i, i, i);
     }
 }
 
@@ -11,9 +11,9 @@ void exportarTabelaASCII() {
     char *arq = "saida/ascii.txt";
     FILE *file = fopen(arq, "w+");
     
-    fprintf(file, "%s;%s;%s\n", "Decimal","Binário", "Caractere");
-    for (int i = 29; i < 127; i++) {
-        fprintf(file, "%d;%08b;%c\n", i, i, i);
+    fprintf(file, "%s;%s;%s\n", "Decimal", "Caractere", "Binário");
+    for (int i = 32; i < 127; i++) {
+        fprintf(file, "%d;%c;%08b\n", i, i, i);
     }
     fclose(file);
 }

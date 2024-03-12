@@ -10,17 +10,17 @@ then
     
     while IFS=";" read -r col1 col2 col3
     do
-        echo "$col2 -> $col3"
+        echo "$col3 -> $col2"
         tr -d "\n" < $ARQ_TXT_DECODIFICADO
         echo ""
         echo ""
         
-        if [ "$col3" == "/" ] || [ "$col3" == "\\" ]
+        if [ "$col2" == "/" ] || [ "$col2" == "\\" ]
         then
-            col3="\\$col3"
+            col2="\\$col2"
         fi
 
-        sed -i "s/$col2/$col3/g" $ARQ_TXT_DECODIFICADO
+        sed -i "s/$col3/$col2/g" $ARQ_TXT_DECODIFICADO
         
         sleep 0.25
     done < $ARQ_ASCII
